@@ -1,465 +1,204 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!doctype html>
+<html lang="zh-Hans">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>金洋实业有限公司 — 加拿大胶囊壳与海洋功能原料供应商</title>
-<meta name="description" content="金洋实业（Golden Ocean Industrial）为加拿大制造商供应海洋来源的HPMC空心胶囊壳及海洋功能性原料（褐藻寡糖）。加拿大注册公司，以加元结算。">
-<meta property="og:title" content="金洋实业有限公司 Golden Ocean Industrial Co. Ltd.">
-<meta property="og:description" content="面向加拿大制造商的海洋来源HPMC空心胶囊壳及海洋功能性原料。">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://goldenoceanindustrial.com">
-<link rel="alternate" hreflang="en" href="https://goldenoceanindustrial.com/">
-<link rel="alternate" hreflang="zh" href="https://goldenoceanindustrial.com/zh.html">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230E7C7B'/><path d='M6 20c2.5 0 2.5-2.5 5-2.5s2.5 2.5 5 2.5 2.5-2.5 5-2.5 2.5 2.5 5 2.5' stroke='white' stroke-width='2.2' fill='none' stroke-linecap='round'/><path d='M6 25c2.5 0 2.5-2.5 5-2.5s2.5 2.5 5 2.5 2.5-2.5 5-2.5 2.5 2.5 5 2.5' stroke='white' stroke-width='2.2' fill='none' stroke-linecap='round' opacity='.55'/><ellipse cx='16' cy='10' rx='7' ry='4' fill='none' stroke='white' stroke-width='2.2'/></svg>">
-
-<style>
-:root{
-  --ink:#0E1E2B; --deep:#143A5A; --accent:#0E7C7B; --accent-dk:#0A5F5E;
-  --paper:#FFFFFF; --surface:#F5F8F9; --line:#DDE5E9;
-  --text:#1C2E3A; --muted:#5C7080; --radius:10px;
-  --maxw:1080px;
-}
-@media (prefers-color-scheme: dark){
-  :root{
-    --ink:#E9F0F4; --deep:#8FC4D8; --accent:#3FB5AE; --accent-dk:#2E9A94;
-    --paper:#0B1620; --surface:#12222E; --line:#243745;
-    --text:#D4E0E8; --muted:#8CA3B3;
-  }
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0; background:var(--paper); color:var(--text);
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;
-  font-size:17px; line-height:1.65; -webkit-font-smoothing:antialiased;
-}
-.wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px}
-a{color:var(--accent); text-decoration:none}
-a:hover{text-decoration:underline}
-h1,h2,h3{color:var(--ink); line-height:1.25; letter-spacing:-.015em; margin:0}
-.skip{position:absolute;left:-9999px}
-.skip:focus{left:16px;top:16px;background:var(--accent);color:#fff;padding:10px 16px;border-radius:6px;z-index:99}
-
-/* header */
-header{border-bottom:1px solid var(--line); background:var(--paper); position:sticky; top:0; z-index:20}
-.hd{display:flex; align-items:center; justify-content:space-between; gap:24px; padding:18px 0}
-.brand{display:flex; align-items:center; gap:12px; font-weight:650; color:var(--ink); font-size:16px; letter-spacing:-.01em}
-.brand svg{flex:none}
-nav a{color:var(--muted); font-size:15px; margin-left:26px; font-weight:500}
-nav a:hover{color:var(--accent); text-decoration:none}
-.nav-toggle-cb{display:none}
-.nav-toggle{display:none; font-size:22px; line-height:1; cursor:pointer; color:var(--ink); padding:4px}
-@media(max-width:700px){
-  nav{display:none; position:absolute; top:100%; left:0; right:0; flex-direction:column;
-    background:var(--paper); border-bottom:1px solid var(--line); padding:6px 24px 14px; margin:0}
-  nav a{margin:10px 0 0}
-  .nav-toggle{display:block}
-  .nav-toggle-cb:checked ~ nav{display:flex}
-}
-
-/* hero */
-.hero{padding:84px 0 72px; border-bottom:1px solid var(--line)}
-.eyebrow{color:var(--accent); font-weight:650; font-size:13px; letter-spacing:.09em; text-transform:uppercase; margin:0 0 18px}
-.hero h1{font-size:clamp(31px,4.4vw,50px); max-width:19ch; margin-bottom:22px}
-.lede{font-size:clamp(17px,1.9vw,20px); color:var(--muted); max-width:60ch; margin:0 0 34px}
-.cta{display:inline-flex; align-items:center; gap:9px; background:var(--accent); color:#fff; font-weight:600;
-  padding:13px 26px; border-radius:var(--radius); font-size:16px; transition:background .15s}
-.cta:hover{background:var(--accent-dk); text-decoration:none; color:#fff}
-.cta-2{margin-left:8px; color:var(--muted); font-weight:500; padding:13px 4px}
-
-/* sections */
-section{padding:72px 0; border-bottom:1px solid var(--line)}
-.sec-h{font-size:13px; font-weight:650; letter-spacing:.09em; text-transform:uppercase; color:var(--accent); margin:0 0 14px}
-h2{font-size:clamp(25px,3vw,33px); margin-bottom:16px; max-width:22ch}
-.sub{color:var(--muted); max-width:62ch; margin:0 0 40px}
-
-/* product table */
-.tbl{width:100%; border-collapse:collapse; font-size:16px}
-.tbl th{text-align:left; font-size:12.5px; letter-spacing:.07em; text-transform:uppercase; color:var(--muted);
-  font-weight:650; padding:0 16px 12px 0; border-bottom:1px solid var(--line)}
-.tbl td{padding:16px 16px 16px 0; border-bottom:1px solid var(--line); vertical-align:top}
-.tbl td:first-child{font-weight:650; color:var(--ink); white-space:nowrap}
-.tag{display:inline-block; background:var(--surface); border:1px solid var(--line); color:var(--muted);
-  font-size:13px; padding:3px 10px; border-radius:100px; margin:2px 4px 2px 0; white-space:nowrap}
-
-/* certifications */
-.certs{display:grid; grid-template-columns:repeat(auto-fit,minmax(158px,1fr)); gap:14px; margin-bottom:26px}
-.cert{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
-  padding:24px 16px; text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; min-height:126px}
-
-.cert-mark{font-weight:700; font-size:19px; color:var(--ink); letter-spacing:-.01em}
-.cert-img{max-width:100%; max-height:46px; height:auto; display:block}
-.cert-cap{font-size:13px; color:var(--muted); line-height:1.4}
-.note{font-size:14.5px; color:var(--muted); border-left:3px solid var(--line); padding-left:16px; max-width:64ch}
-
-/* value cards */
-.cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(258px,1fr)); gap:26px}
-.card h3{font-size:18px; margin-bottom:9px}
-.card p{color:var(--muted); margin:0; font-size:16px}
-.card .ic{width:38px; height:38px; border-radius:9px; background:var(--surface); border:1px solid var(--line);
-  display:flex; align-items:center; justify-content:center; margin-bottom:15px; color:var(--accent)}
-
-/* form */
-.form-grid{display:grid; grid-template-columns:1fr 1fr; gap:18px; max-width:660px}
-@media(max-width:640px){.form-grid{grid-template-columns:1fr}}
-.field{display:flex; flex-direction:column; gap:7px}
-.field.full{grid-column:1/-1}
-label{font-size:14px; font-weight:600; color:var(--ink)}
-label .req{color:var(--accent)}
-input,select,textarea{
-  font:inherit; font-size:16px; color:var(--text); background:var(--paper);
-  border:1px solid var(--line); border-radius:8px; padding:11px 13px; width:100%;
-}
-input:focus,select:focus,textarea:focus{outline:2px solid var(--accent); outline-offset:1px; border-color:transparent}
-textarea{resize:vertical; min-height:104px}
-.hint{font-size:13.5px; color:var(--muted)}
-button{
-  font:inherit; font-weight:600; font-size:16px; background:var(--accent); color:#fff;
-  border:0; border-radius:var(--radius); padding:13px 30px; cursor:pointer; transition:background .15s
-}
-button:hover{background:var(--accent-dk)}
-.hp{position:absolute; left:-9999px}
-
-/* footer */
-footer{padding:44px 0 56px; font-size:15px; color:var(--muted)}
-.foot{display:flex; justify-content:space-between; gap:28px; flex-wrap:wrap}
-.foot strong{color:var(--ink); font-weight:650; display:block; margin-bottom:5px}
-.reg{font-variant-numeric:tabular-nums}
-</style>
-</head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Golden Ocean Industrial 金洋实业 | 加拿大海洋源原料与HPMC空心胶囊供应商</title>
+    <meta name="description"
+        content="Golden Ocean Industrial（金洋实业）向加拿大制造企业供应海洋源褐藻寡糖及植物源HPMC空心胶囊。">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="golden-ocean-logo.png"><link rel="alternate" hreflang="en" href="https://goldenoceanindustrial.com/"><link rel="alternate" hreflang="zh-Hans" href="https://goldenoceanindustrial.com/zh.html"><link rel="alternate" hreflang="x-default" href="https://goldenoceanindustrial.com/"></head>
 
 <body>
-<a class="skip" href="#main">跳转到主要内容</a>
-
-<header>
-  <div class="wrap hd">
-    <div class="brand">
-      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true">
-        <rect width="32" height="32" rx="6" fill="#0E7C7B"/>
-        <path d="M6 20c2.5 0 2.5-2.5 5-2.5s2.5 2.5 5 2.5 2.5-2.5 5-2.5 2.5 2.5 5 2.5" stroke="white" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-        <path d="M6 25c2.5 0 2.5-2.5 5-2.5s2.5 2.5 5 2.5 2.5-2.5 5-2.5 2.5 2.5 5 2.5" stroke="white" stroke-width="2.2" fill="none" stroke-linecap="round" opacity=".55"/>
-        <ellipse cx="16" cy="10" rx="7" ry="4" fill="none" stroke="white" stroke-width="2.2"/>
-      </svg>
-      金洋实业 Golden Ocean Industrial
+    <div class="topbar">
+        <div class="container">
+            <div>海洋源原料解决方案 · 加拿大不列颠哥伦比亚省</div>
+            <div class="right"><span>sales@goldenoceanindustrial.com</span><span>604-207-0057</span></div>
+        </div>
     </div>
-    <input type="checkbox" id="navToggle" class="nav-toggle-cb">
-    <label for="navToggle" class="nav-toggle" aria-label="菜单">&#9776;</label>
-    <nav>
-      <a href="#products">胶囊壳</a>
-      <a href="#ingredients">褐藻寡糖</a>
-      <a href="#quality">质量认证</a>
-      <a href="#why">为何选择我们</a>
-      <a href="#quote">获取报价</a>
-      <a href="index.html">EN</a>
+    <nav class="nav">
+        <div class="container"><a class="brand" href="zh.html"><img src="golden-ocean-logo.png"
+                    alt="Golden Ocean 标志"><span>Golden Ocean Industrial</span></a><div class="lang-switch" aria-label="语言"><a href="index.html" lang="en" hreflang="en">EN</a><a href="zh.html" lang="zh-Hans" hreflang="zh-Hans" class="active" aria-current="true">中文</a></div><button class="menu-toggle"
+                aria-label="菜单">☰</button>
+            <div class="navlinks"><a href="zh.html">首页</a>
+                <div class="drop"><a href="#products">产品 ▾</a>
+                    <div class="dropmenu"><a href="zh-alginate-oligosaccharide.html"><strong>褐藻寡糖</strong><br><small>重点海洋源原料</small></a><a
+                            href="zh-hpmc-capsules.html"><strong>HPMC空心胶囊</strong><br><small>植物源空心胶囊</small></a></div>
+                </div><a href="zh-quality.html">质量</a><a href="zh-about.html">关于我们</a><a
+                    href="zh-contact.html">联系我们</a>
+            </div><a class="btn primary" href="zh-contact.html">获取报价 →</a>
+        </div>
     </nav>
-  </div>
+
+
+
+<!-- hero page -->
+<header class="hero">
+    <div class="container hero-container">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                重点原料 · 褐藻寡糖
+            </div>
+
+            <h1>
+                海洋科技，<br>
+                <span>即刻商用。</span>
+            </h1>
+
+            <p class="lead">
+                Golden Ocean Industrial 为加拿大产品开发企业提供海洋源褐藻寡糖及可用于资质审核的原料技术文件，并供应适用于成品开发的植物源HPMC胶囊。
+            </p>
+
+            <div class="actions">
+                <a class="btn primary"
+                   href="zh-alginate-oligosaccharide.html">
+                    了解褐藻寡糖 →
+                </a>
+
+                <a class="btn outline"
+                   href="zh-contact.html">
+                    申请样品
+                </a>
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+            <img
+                src="heroPageImg.jpg"
+                alt="源自褐藻的褐藻寡糖">
+        </div>
+
+    </div>
 </header>
 
-<main id="main">
 
-  <div class="hero">
-    <div class="wrap">
-      <p class="eyebrow">胶囊壳与海洋功能性原料 · 加拿大不列颠哥伦比亚省</p>
-      <h1>面向加拿大制造商的海洋来源HPMC空心胶囊壳与褐藻寡糖（AOS）</h1>
-      <p class="lede">
-        金洋实业为加拿大各地的天然健康产品制造商供应素食羟丙甲纤维素（HPMC）空心胶囊壳
-        及褐藻寡糖（AOS）。胶囊提供1号、0号及00号规格，透明及有色可选。作为加拿大本地公司，
-        以加元开票，并由我方负责进口清关，无需您自行处理。
-      </p>
-      <a class="cta" href="#quote">获取报价
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
-      <a class="cta-2" href="mailto:sales@goldenoceanindustrial.com">sales@goldenoceanindustrial.com</a>
-    </div>
-  </div>
 
-  <section id="products">
-    <div class="wrap">
-      <p class="sec-h">产品系列</p>
-      <h2>素食HPMC胶囊，采用海藻多糖制成</h2>
-      <p class="sub">
-        我们的胶囊壳由羟丙甲纤维素配合海洋来源凝胶剂制成 —— 不含明胶、不含动物成分，
-        透明系列不含二氧化钛。适用于素食、纯素及清真配方。
-      </p>
-
-      <table class="tbl">
-        <thead>
-          <tr><th>规格</th><th>类型</th><th>成分</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>00号</td>
-            <td><span class="tag">透明</span><span class="tag">有色</span></td>
-            <td>HPMC + 海洋多糖</td>
-          </tr>
-          <tr>
-            <td>0号</td>
-            <td><span class="tag">透明</span><span class="tag">有色</span></td>
-            <td>HPMC + 海洋多糖</td>
-          </tr>
-          <tr>
-            <td>1号</td>
-            <td><span class="tag">透明</span><span class="tag">有色</span></td>
-            <td>HPMC + 海洋多糖</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <p class="note" style="margin-top:30px">
-        在推荐储存条件下保质期为四年，并有48个月稳定性数据支持。
-        完整的产品规格书、检测报告及技术文档可应要求提供，以支持您的供应商审核。
-      </p>
-    </div>
-  </section>
-
-  <section id="quality">
-    <div class="wrap">
-      <p class="sec-h">质量与认证</p>
-      <h2>按国际认可标准生产</h2>
-      <p class="sub">
-        我们的生产合作方持有以下认证及注册资质。现行有效的证书将随审核资料包一并提供。
-      </p>
-
-      <div class="certs">
-        
-        <div class="cert">
-          <span class="cert-mark">BRCGS</span>
-          <span class="cert-cap">全球食品安全标准</span>
+    <main>
+        <section class="section alt" id="products">
+            <div class="container">
+                <div class="section-title">
+                    <div>
+                        <div class="eyebrow" style="color:var(--ink-2)">产品组合</div>
+                        <h2>以海洋原料为核心的产品体系。</h2>
+                    </div>
+                    <p>褐藻寡糖是我们的重点产品。同时，我们继续为需要植物源剂型、并希望在加拿大本地采购的制造商供应HPMC空心胶囊。</p>
+                </div>
+                <div class="grid3">
+                    <article class="card featured"><span class="pill">重点推荐</span>
+                        <div class="num">01</div>
+                        <h3>褐藻寡糖（AOS）</h3>
+                        <p>源自褐藻的寡糖原料，适用于功能食品、营养保健品及产品开发。</p><a class="card-link"
+                            href="zh-alginate-oligosaccharide.html">查看产品详情 →</a>
+                    </article>
+                    <article class="card">
+                        <div class="num">02</div>
+                        <h3>植物源HPMC胶囊</h3>
+                        <p>空心胶囊规格为00号、0号和1号，提供透明及有色款式。</p>
+                        <a class="card-link" href="zh-hpmc-capsules.html">查看胶囊系列 →</a>
+                    </article>
+                    <article class="card dark">
+                        <div class="num">03</div>
+                        <h3>技术与资质支持</h3>
+                        <p>提供产品规格、现有技术记录、运输分类及资质文件，供企业客户审核。</p><a class="card-link" href="zh-quality.html">了解质量支持 →</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="story">
+                    <div class="story-visual"><img src="introduce.jpg" alt="Golden Ocean Industrial">
+                    </div>
+                    <div class="story-copy">
+                        <div class="eyebrow" style="color:var(--ink-2)">关于我们</div>
+                        <h2>您在加拿大的海洋源原料商业伙伴。</h2>
+                        <p>Golden Ocean Industrial Co., Ltd.（金洋实业有限公司）在加拿大不列颠哥伦比亚省注册成立，为加拿大客户提供本地沟通、报价及供应协调服务。褐藻寡糖方面，我们通过一家成熟的海洋生物科技制造合作伙伴向加拿大客户供货。</p>
+                        <div class="statrow">
+                            <div class="stat"><strong>BC</strong><span>加拿大注册公司</span></div>
+                            <div class="stat"><strong>AOS</strong><span>重点海洋原料</span></div>
+                            <div class="stat"><strong>00 / 0 / 1</strong><span>HPMC胶囊规格</span></div>
+                            <div class="stat"><strong>B2B</strong><span>面向制造企业供货</span></div>
+                        </div>
+                        <div class="actions"><a class="btn dark" href="zh-about.html">了解更多 →</a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section alt">
+            <div class="container">
+                <div class="section-title">
+                    <div>
+                        <div class="eyebrow" style="color:var(--ink-2)">为何选择我们</div>
+                        <h2>技术信息详尽，进口流程省心。</h2>
+                    </div>
+                    <p>我们专注于工业采购方最先需要评估的内容：产品适配性、有据可查的规格、资质审核支持，以及明确的加拿大本地联系人。</p>
+                </div>
+                <div class="feature-grid">
+                    <div class="feature">
+                        <div class="icon">01</div>
+                        <h4>规格有据可查</h4>
+                        <p>在商业资质审核前，即可审阅核心产品指标及支持文件。</p>
+                    </div>
+                    <div class="feature">
+                        <div class="icon">02</div>
+                        <h4>加拿大本地沟通</h4>
+                        <p>本地商务联系人，负责报价、样品及供应协调。</p>
+                    </div>
+                    <div class="feature">
+                        <div class="icon">03</div>
+                        <h4>专注海洋原料</h4>
+                        <p>褐藻寡糖是我们的主打产品，依托制造合作伙伴在海洋生物活性物质领域的专业积累。
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <div class="icon">04</div>
+                        <h4>助力产品开发</h4>
+                        <p>应用领域包括功能食品、营养保健品及膳食补充剂开发。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="cta">
+                    <div>
+                        <h2>正在为新配方评估褐藻寡糖？</h2>
+                        <p>请告诉我们您的应用方向、目标剂型及大致用量。我们可就产品适配性、技术文件、样品及商业供应与您详细沟通。</p>
+                    </div><a class="btn primary" href="zh-contact.html">申请样品或报价 →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div><a class="brand" href="zh.html" style="color:white"><img src="golden-ocean-logo.png"
+                            alt="Golden Ocean 标志"><span>Golden Ocean Industrial</span></a>
+                    <p class="small">为加拿大制造企业提供海洋源原料及胶囊供应解决方案。
+                    </p>
+                </div>
+                <div>
+                    <h4>产品</h4><a href="zh-alginate-oligosaccharide.html">褐藻寡糖</a><a
+                        href="zh-hpmc-capsules.html">HPMC空心胶囊</a>
+                </div>
+                <div>
+                    <h4>公司</h4><a href="zh-about.html">关于我们</a><a href="zh-quality.html">质量</a><a
+                        href="zh-contact.html">联系我们</a>
+                </div>
+                <div>
+                    <h4>联系我们</h4><a
+                        href="mailto:sales@goldenoceanindustrial.com">sales@goldenoceanindustrial.com</a><span
+                        class="small">Unit 140, 8877 Odlin Crescent<br>Richmond, BC V6X 3Z7</span>
+                </div>
+            </div>
+            <div class="footline"><span>© 2026 Golden Ocean Industrial Co., Ltd.</span><span>公司注册号 BC1591256 · 加拿大不列颠哥伦比亚省</span></div>
         </div>
-        <div class="cert">
-          <span class="cert-mark">NSF</span>
-          <span class="cert-cap">良好生产规范</span>
-        </div>
-        <div class="cert">
-          <span class="cert-mark">FDA</span>
-          <span class="cert-cap">工厂注册</span>
-        </div>
-        <div class="cert">
-          <span class="cert-mark">HALAL</span>
-          <span class="cert-cap">JAKIM清真认证</span>
-        </div>
-        <div class="cert">
-          <span class="cert-mark">NON-GMO</span>
-          <span class="cert-cap">非转基因声明</span>
-        </div>
-      </div>
-
-      <p class="note">
-        以上认证均由我方生产合作方就其生产设施持有。相关证书副本可应要求提供。
-      </p>
-    </div>
-  </section>
-
-  <section id="ingredients">
-    <div class="wrap">
-      <p class="sec-h">原料系列</p>
-      <h2>褐藻寡糖（AOS）—— 海洋功能性原料</h2>
-      <p class="sub">
-        一种由褐藻（海带）提取的水溶性寡糖，以淡黄色粉末形态供应，
-        可用于功能性食品、饮料及保健品的配方开发。
-      </p>
-
-      <table class="tbl">
-        <thead>
-          <tr><th>指标</th><th>规格</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>外观</td>
-            <td>淡黄色至黄色粉末，水溶性</td>
-          </tr>
-          <tr>
-            <td>含量</td>
-            <td>&ge;90%（干基）</td>
-          </tr>
-          <tr>
-            <td>平均分子量</td>
-            <td>600&ndash;1,400 Da</td>
-          </tr>
-          <tr>
-            <td>平均聚合度</td>
-            <td>3&ndash;7</td>
-          </tr>
-          <tr>
-            <td>成分</td>
-            <td>0糖、0脂肪，低升糖指数</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <p class="note" style="margin-top:30px">
-        适用于压片糖果、固体饮料、功能饮料、乳制品及能量棒等产品的配方开发。
-        制造商建议的终端产品标签用量指引：每日摄入量&le;4克；不建议用于面向婴幼儿、
-        孕妇及哺乳期女性的产品。完整的检测报告及技术规格书可应要求提供，以支持配方开发及供应商审核。
-      </p>
-    </div>
-  </section>
-
-  <section id="why">
-    <div class="wrap">
-      <p class="sec-h">为何选择金洋</p>
-      <h2>加拿大本地供应商，无需承担进口负担</h2>
-      <p class="sub">
-        我们接触的大多数制造商在胶囊供应上都是单一来源。我们的定位是成为您经过审核的第二供应商
-        —— 这样上游的延误或价格波动就不会变成您生产上的问题。
-      </p>
-
-      <div class="cards">
-        <div class="card">
-          <div class="ic" aria-hidden="true">
-            <svg width="19" height="19" viewBox="0 0 20 20" fill="none">
-              <path d="M10 2l6.5 3v5c0 4-2.7 6.9-6.5 8-3.8-1.1-6.5-4-6.5-8V5L10 2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
-              <path d="M7.4 10.2l1.9 1.9 3.6-3.9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <h3>文档齐全，可供审核</h3>
-          <p>提前提供产品规格书、检测报告及认证记录，以支持您的质量审核流程。</p>
-        </div>
-
-        <div class="card">
-          <div class="ic" aria-hidden="true">
-            <svg width="19" height="19" viewBox="0 0 20 20" fill="none">
-              <circle cx="10" cy="10" r="7.4" stroke="currentColor" stroke-width="1.6"/>
-              <path d="M10 5.6v4.6l3 1.7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <h3>进口环节由我方负责</h3>
-          <p>清关、单证及送货至您工厂均由我方负责。您只需下达国内订单，收到的即是本地货物。</p>
-        </div>
-
-        <div class="card">
-          <div class="ic" aria-hidden="true">
-            <svg width="19" height="19" viewBox="0 0 20 20" fill="none">
-              <path d="M10 2.6v14.8M13.6 5.4H8.3a2.3 2.3 0 000 4.6h3.4a2.3 2.3 0 010 4.6H6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <h3>以加元开票结算</h3>
-          <p>无汇率风险、无需处理国际付款，您这一侧也不存在海外交易对手风险。</p>
-        </div>
-
-        <div class="card">
-          <div class="ic" aria-hidden="true">
-            <svg width="19" height="19" viewBox="0 0 20 20" fill="none">
-              <path d="M2.6 10c2 0 2-2.4 4-2.4S8.6 10 10.6 10s2-2.4 4-2.4 2 2.4 2.8 2.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-              <path d="M2.6 14.6c2 0 2-2.4 4-2.4s2 2.4 4 2.4 2-2.4 4-2.4 2 2.4 2.8 2.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-              <ellipse cx="10" cy="4.6" rx="4.4" ry="2.4" stroke="currentColor" stroke-width="1.6"/>
-            </svg>
-          </div>
-          <h3>天然植物来源</h3>
-          <p>不含明胶、不含动物成分 —— 适用于素食、纯素及清真配方，无需重新调整您的胶囊壳配方。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="quote">
-    <div class="wrap">
-      <p class="sec-h">获取报价</p>
-      <h2>告诉我们您的需求</h2>
-      <p class="sub">
-        请告知您所需的规格及采购量，我们将回复报价及交货周期。
-        如有需要，我们也可同步寄送样品以配合您的审核工作。
-      </p>
-
-      
-      <form action="https://formspree.io/f/xeajpvor" method="POST">
-        <div class="form-grid">
-          <div class="field">
-            <label for="name">姓名 <span class="req">*</span></label>
-            <input id="name" name="name" type="text" required autocomplete="name">
-          </div>
-          <div class="field">
-            <label for="company">公司 <span class="req">*</span></label>
-            <input id="company" name="company" type="text" required autocomplete="organization">
-          </div>
-          <div class="field">
-            <label for="email">邮箱 <span class="req">*</span></label>
-            <input id="email" name="email" type="email" required autocomplete="email">
-          </div>
-          <div class="field">
-            <label for="phone">电话</label>
-            <input id="phone" name="phone" type="tel" autocomplete="tel">
-          </div>
-          <div class="field">
-            <label for="product">产品</label>
-            <select id="product" name="product">
-              <option value="">请选择</option>
-              <option>胶囊壳</option>
-              <option>褐藻寡糖（AOS）</option>
-              <option>两者都需要</option>
-              <option>尚未确定</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="province">送货省份</label>
-            <select id="province" name="province">
-              <option value="">请选择</option>
-              <option>不列颠哥伦比亚省</option>
-              <option>艾伯塔省</option>
-              <option>萨斯喀彻温省</option>
-              <option>马尼托巴省</option>
-              <option>安大略省</option>
-              <option>魁北克省</option>
-              <option>新不伦瑞克省</option>
-              <option>新斯科舍省</option>
-              <option>爱德华王子岛省</option>
-              <option>纽芬兰与拉布拉多省</option>
-              <option>加拿大境外</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="size">胶囊规格（如适用）</label>
-            <select id="size" name="size">
-              <option value="">请选择</option>
-              <option>00号</option>
-              <option>0号</option>
-              <option>1号</option>
-              <option>多种规格</option>
-              <option>尚未确定</option>
-            </select>
-          </div>
-          <div class="field full">
-            <label for="quantity">大致采购量</label>
-            <input id="quantity" name="quantity" type="text" placeholder="例如：3,000,000粒胶囊，或您常规的褐藻寡糖采购量">
-            <span class="hint">大致数字即可，便于我们准确报价。</span>
-          </div>
-          <div class="field full">
-            <label for="message">留言</label>
-            <textarea id="message" name="message" placeholder="其他有助于我们回复的信息 —— 例如时间要求、透明或有色、褐藻寡糖包装规格、审核要求等。"></textarea>
-          </div>
-          <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <div class="field full">
-            <button type="submit">发送咨询</button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </section>
-
-</main>
-
-<footer>
-  <div class="wrap foot">
-    <div>
-      <strong>金洋实业有限公司 Golden Ocean Industrial Co. Ltd.</strong>
-      在加拿大不列颠哥伦比亚省注册成立<br>
-      公司注册号 <span class="reg">BC1591256</span>
-    </div>
-    <div>
-      <strong>联系方式</strong>
-      <a href="mailto:sales@goldenoceanindustrial.com">sales@goldenoceanindustrial.com</a><br>
-      goldenoceanindustrial.com
-    </div>
-    <div>
-      <strong>咨询</strong>
-      供应商审核资料包及样品<br>
-      可应要求提供。
-    </div>
-  </div>
-</footer>
-
+    </footer>
+    <script src="main.js"></script>
 </body>
+
 </html>

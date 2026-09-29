@@ -890,3 +890,46 @@ textarea {
     flex-direction: column
   }
 }
+
+/* ---- Language switch (EN / 中文) ---- */
+.nav .container > .brand { order: 1 }
+.navlinks { order: 2; margin: 0 auto }
+.lang-switch { order: 3 }
+.nav .container > .btn { order: 4 }
+.menu-toggle { order: 5 }
+
+.lang-switch {
+  display: flex;
+  flex: none;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: white;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1
+}
+
+.lang-switch a {
+  padding: 7px 11px;
+  border-radius: 999px;
+  color: var(--muted)
+}
+
+.lang-switch a:hover { color: var(--ink) }
+.lang-switch a.active { background: var(--ink); color: white }
+
+:lang(zh) body,
+body:lang(zh) {
+  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", "Noto Sans CJK SC", ui-sans-serif, system-ui, sans-serif
+}
+
+@media(max-width:900px) {
+  .nav .container { gap: 12px }
+  .nav .container > .brand { margin-right: auto }
+}
+
+@media(max-width:620px) {
+  .brand img { width: 40px; height: 40px }
+  .brand span { font-size: 15px; line-height: 1.15; max-width: 120px }
+}
