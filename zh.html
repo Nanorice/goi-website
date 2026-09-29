@@ -87,11 +87,7 @@ h2{font-size:clamp(25px,3vw,33px); margin-bottom:16px; max-width:22ch}
 .certs{display:grid; grid-template-columns:repeat(auto-fit,minmax(158px,1fr)); gap:14px; margin-bottom:26px}
 .cert{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
   padding:24px 16px; text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; min-height:126px}
-/* ---------------------------------------------------------------
-   LOGO SLOT — replace the .cert-mark <span> with an <img> once you
-   have WRITTEN PERMISSION from the manufacturer, e.g.:
-   <img src="logos/brcgs.svg" alt="BRCGS certified" class="cert-img">
-   --------------------------------------------------------------- */
+
 .cert-mark{font-weight:700; font-size:19px; color:var(--ink); letter-spacing:-.01em}
 .cert-img{max-width:100%; max-height:46px; height:auto; display:block}
 .cert-cap{font-size:13px; color:var(--muted); line-height:1.4}
@@ -228,8 +224,7 @@ footer{padding:44px 0 56px; font-size:15px; color:var(--muted)}
       </p>
 
       <div class="certs">
-        <!-- LOGO SLOTS: swap each <span class="cert-mark"> for
-             <img src="logos/xxx.svg" alt="..." class="cert-img"> once permission is in hand -->
+        
         <div class="cert">
           <span class="cert-mark">BRCGS</span>
           <span class="cert-cap">全球食品安全标准</span>
@@ -369,13 +364,7 @@ footer{padding:44px 0 56px; font-size:15px; color:var(--muted)}
         如有需要，我们也可同步寄送样品以配合您的审核工作。
       </p>
 
-      <!-- ===========================================================
-           FORM ENDPOINT — replace YOUR_FORM_ID before going live.
-           Free options:
-             Formspree  https://formspree.io   (50 submissions/month free)
-             Web3Forms  https://web3forms.com  (250/month free, no account)
-           See DEPLOY.md step 4.
-           =========================================================== -->
+      
       <form action="https://formspree.io/f/xeajpvor" method="POST">
         <div class="form-grid">
           <div class="field">
