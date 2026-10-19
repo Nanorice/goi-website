@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://goldenoceanindustrial.com/sitemap.xml
