@@ -13,7 +13,7 @@ Open `index.html` in a browser, or run a static server.
 5. Once DNS access is available, add `goldenoceanindustrial.com` as the custom domain and update the domain DNS records following GitHub Pages instructions.
 
 ## Before launch
-- Confirm public contact email, phone, address and company number.
+- Confirm public contact email, phone and address.
 - Review all AOS claims with Canadian regulatory counsel before commercial use.
 - Decide which PDFs should remain public downloads.
 - Replace the mailto form with a form backend if desired.
